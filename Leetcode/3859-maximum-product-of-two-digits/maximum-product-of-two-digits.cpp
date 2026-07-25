@@ -21,7 +21,7 @@ public:
             }
         }
 
-        long long b=(max1*max2);
-        return b;
+        int b=(max1*max2);
+        return min(81,b);
     }
 };
