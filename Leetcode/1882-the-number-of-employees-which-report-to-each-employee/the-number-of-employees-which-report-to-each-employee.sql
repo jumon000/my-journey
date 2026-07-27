@@ -6,6 +6,6 @@ SELECT
 FROM Employees e
 RIGHT JOIN Employees m
 ON e.reports_to = m.employee_id
-GROUP BY m.employee_id, m.name
+GROUP BY m.employee_id
 HAVING COUNT(e.employee_id) > 0
 ORDER BY m.employee_id;
