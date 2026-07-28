@@ -1,7 +1,7 @@
 class Solution {
 public:
     using ull = unsigned long long;
-    const ull BASE = 131;
+    const ull BASE = 26;
 
     vector<int> beautifulIndices(string s, string a, string b, int k) {
 
