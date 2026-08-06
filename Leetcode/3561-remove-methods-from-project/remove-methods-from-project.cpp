@@ -3,12 +3,10 @@ public:
     vector<int> remainingMethods(int n, int k, vector<vector<int>>& invocations) {
 
         queue<int> q;
-        vector<int> indegree(n, 0);
         vector<vector<int>> adj(n);
 
         for (auto &it : invocations) {
             adj[it[0]].push_back(it[1]);
-            indegree[it[1]]++;
         }
 
         unordered_set<int> st;
@@ -22,7 +20,6 @@ public:
             q.pop();
 
             for (auto it : adj[node]) {
-                indegree[it]--;
 
                 if (!st.count(it)) {
                     q.push(it);
